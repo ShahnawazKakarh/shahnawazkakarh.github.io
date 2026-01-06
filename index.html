@@ -1,266 +1,132 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>skakarh — Portfolio & Blog</title>
-  <meta name="description" content="Personal website of skakarh — machine learning, data science, automation, and notes." />
-  <meta name="theme-color" content="#0ea5e9" />
-  <meta property="og:title" content="skakarh — Portfolio & Blog" />
-  <meta property="og:description" content="Projects, writing, and ways to reach me." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://avatars.githubusercontent.com/u/0?v=4" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <script>
-    // Simple, build-free dark mode toggle using localStorage
-    (function(){
-      const saved = localStorage.getItem('color-scheme');
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      if ((saved && saved === 'dark') || (!saved && prefersDark)) {
-        document.documentElement.classList.add('dark');
-      }
-    })();
-  </script>
-  <style>
-    :root {
-      --bg: #0b1220; /* dark gradient start */
-      --bg2:#0f172a; /* slate-900 */
-      --fg: #0a0a0a; /* light bg */
-      --text: #0f172a;
-      --muted:#475569;
-      --brand:#0ea5e9; /* sky-500 */
-      --brand-2:#22d3ee; /* cyan-400 */
-      --card:#ffffff;
-      --ring: rgba(14,165,233,.35);
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif;line-height:1.6;color:var(--text);background:#f8fafc}
-    .dark body{color:#e2e8f0;background:linear-gradient(180deg,var(--bg) 0%, var(--bg2) 100%)}
-    header{position:sticky;top:0;backdrop-filter:saturate(180%) blur(10px);background:rgba(248,250,252,.7);border-bottom:1px solid #e2e8f0;z-index:20}
-    .dark header{background:rgba(2,6,23,.6);border-color:#0b1220}
-    .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
-    .row{display:flex;align-items:center;justify-content:space-between}
-    .brand{display:flex;gap:12px;align-items:center;padding:14px 0;font-weight:700}
-    .brand .logo{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--brand-2));display:grid;place-items:center;color:white;font-weight:800}
-    nav a{color:inherit;text-decoration:none;margin-left:18px;font-weight:600;opacity:.9}
-    nav a:hover{opacity:1}
-    .toggle{border:1px solid #e2e8f0;border-radius:10px;padding:8px 10px;background:white;cursor:pointer}
-    .dark .toggle{background:#0b1220;border-color:#1e293b;color:#e2e8f0}
-    .hero{padding:72px 0 42px}
-    .badge{display:inline-flex;gap:8px;align-items:center;background:rgba(14,165,233,.1);border:1px solid var(--ring);color:#0369a1;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:700}
-    .dark .badge{color:#7dd3fc}
-    h1{font-size:42px;line-height:1.15;margin:16px 0 10px}
-    .lead{font-size:18px;color:#334155}
-    .dark .lead{color:#a3b2c8}
-    .cta{display:flex;gap:12px;margin-top:22px}
-    .btn{padding:12px 16px;border-radius:12px;border:1px solid #e2e8f0;background:white;font-weight:700;text-decoration:none;color:#0f172a;box-shadow:0 1px 0 rgba(15,23,42,.04)}
-    .btn:hover{transform:translateY(-1px)}
-    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));border:none;color:white}
-    .dark .btn{background:#0b1220;border-color:#1f2937;color:#e2e8f0}
-    .dark .btn.primary{color:#0b1220}
+<p align="center">
+	<a href="https://github.com/ShahnawazKakarh">
+		<img src="https://readme-typing-svg.herokuapp.com?color=%236FDA44&size=32&center=true&vCenter=true&width=600&height=50&lines=Hi+there+I'm+Shahnawaz+Khan+%F0%9F%91%8B;Computer+Scientist;QA+Automation+Specialist;Back-End+Engineer;Problem+Solver;Freelancer;Open-Source+Enthusiast" alt="Headline" />
+	</a>
+</p>
 
-    section{padding:28px 0}
-    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:18px}
-    .card{background:var(--card);border:1px solid #e2e8f0;border-radius:18px;padding:18px;transition:transform .15s, box-shadow .15s}
-    .card:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(2,6,23,.08)}
-    .dark .card{background:#0b1220;border-color:#1e293b}
-    .kicker{font-weight:800;font-size:12px;letter-spacing:.1em;color:#475569;text-transform:uppercase}
-    .dark .kicker{color:#94a3b8}
-    .card h3{margin:6px 0 8px}
-    .muted{color:#64748b}
-    .dark .muted{color:#93a2b9}
+<p align="center">
+	<a href="https://github.com/ShahnawazKakarh">
+		<img src="https://komarev.com/ghpvc/?username=ShahnawazKakarh&label=Profile%20views&color=0e75b6&style=flat" alt="ShahnawazKakarh" />
+	</a>
+	<a href="https://github.com/ShahnawazKakarh">
+		<img src="https://img.shields.io/github/followers/ShahnawazKakarh?label=Followers" alt="ShahnawazKakarh" />
+	</a>
+</p>
 
-    .grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;align-items:center}
-    .panel{background:var(--card);border:1px solid #e2e8f0;border-radius:20px;padding:22px}
-    .dark .panel{background:#0b1220;border-color:#1e293b}
+<hr>
 
-    footer{border-top:1px solid #e2e8f0;margin-top:42px;padding:20px 0;color:#64748b}
-    .dark footer{border-color:#0b1220}
-    code{background:rgba(2,6,23,.06);padding:2px 6px;border-radius:6px}
-    .dark code{background:rgba(255,255,255,.06)}
-    .pill{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid #e2e8f0;margin:0 8px 8px 0}
-    .dark .pill{border-color:#1e293b}
-    .sr-only{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
-  </style>
-</head>
-<body>
-  <header>
-    <div class="wrap row">
-      <a class="brand" href="#top" aria-label="Home">
-        <span class="logo" aria-hidden="true">sk</span>
-        <span>skakarh</span>
-      </a>
-      <nav>
-        <a href="#projects">Projects</a>
-        <a href="#writing">Writing</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <button id="modeToggle" class="toggle" aria-label="Toggle dark mode">🌙</button>
-      </nav>
-    </div>
-  </header>
+💻 **QA Automation Engineer | SDET | Python Developer**  
+📍 Based in Lahore, Pakistan  
 
-  <main id="top" class="wrap">
-    <!-- Hero -->
-    <section class="hero">
-      <span class="badge">👋 Hi, I'm <strong style="margin-left:6px">skakarh</strong></span>
-      <h1>Building with ML, automation, and data.</h1>
-      <p class="lead">I tinker with machine learning, data pipelines, LLMs, and agentic automations. This is my tiny corner on the internet for projects and notes.</p>
-      <div class="cta">
-        <a class="btn primary" href="#projects">See Projects</a>
-        <a class="btn" href="#contact">Hire / Collaborate</a>
-      </div>
-    </section>
+<hr>
 
-    <!-- Highlights -->
-    <section class="grid-2">
-      <div class="panel">
-        <div class="kicker">Latest</div>
-        <h2 style="margin:6px 0 12px">What I'm working on</h2>
-        <ul>
-          <li>🧪 Writing about test automation (Cypress, QA, BDD).</li>
-          <li>🤖 Building n8n agentic workflows for data + AI automations.</li>
-          <li>📊 Learning-by-doing with ML/NLP projects.</li>
-        </ul>
-      </div>
-      <div class="panel">
-        <div class="kicker">Tech</div>
-        <h2 style="margin:6px 0 12px">Stacks & tools</h2>
-        <div>
-          <span class="pill">Python</span>
-          <span class="pill">Pandas</span>
-          <span class="pill">scikit-learn</span>
-          <span class="pill">NLP</span>
-          <span class="pill">LLMs</span>
-          <span class="pill">Cypress</span>
-          <span class="pill">n8n</span>
-          <span class="pill">GitHub Actions</span>
-          <span class="pill">Docker</span>
-        </div>
-      </div>
-    </section>
+## 👨‍💻 About Me
 
-    <!-- Projects -->
-    <section id="projects">
-      <div class="kicker">Projects</div>
-      <h2>Selected work</h2>
-      <div class="cards">
-        <article class="card">
-          <div class="kicker">ML</div>
-          <h3>Tabular ML Starter</h3>
-          <p class="muted">Clean baseline for classification/regression with reproducible splits, metrics, and model tracking.</p>
-          <a class="btn" href="https://github.com/skakarh" target="_blank" rel="noopener">Code →</a>
-        </article>
-        <article class="card">
-          <div class="kicker">Automation</div>
-          <h3>n8n Agentic Workflows</h3>
-          <p class="muted">Event-driven automations that orchestrate LLM tools for scraping, data enrichment, and reporting.</p>
-          <a class="btn" href="https://github.com/skakarh" target="_blank" rel="noopener">Workflows →</a>
-        </article>
-        <article class="card">
-          <div class="kicker">Testing</div>
-          <h3>Cypress Recipe Book</h3>
-          <p class="muted">Practical patterns for robust UI testing with fixtures, intercepts, and CI tips.</p>
-          <a class="btn" href="https://github.com/skakarh" target="_blank" rel="noopener">Repo →</a>
-        </article>
-      </div>
-    </section>
+<picture> <img align="right" src="https://github.com/ShahnawazKakarh/ShahnawazKakarh/blob/main/programming.gif" width = 250px></picture>
 
-    <!-- Writing -->
-    <section id="writing">
-      <div class="kicker">Writing</div>
-      <h2>Notes & posts</h2>
-      <div class="cards">
-        <article class="card">
-          <h3>From Zero to Baseline: A Fast ML Workflow</h3>
-          <p class="muted">A crisp path to go from raw CSV to a fair, explainable baseline model.</p>
-          <a class="btn" href="https://medium.com/" target="_blank" rel="noopener">Read on Medium →</a>
-        </article>
-        <article class="card">
-          <h3>Agentic n8n: Let Your Tools Talk</h3>
-          <p class="muted">Making automations smarter by letting steps reason about each other.</p>
-          <a class="btn" href="https://medium.com/" target="_blank" rel="noopener">Read on Medium →</a>
-        </article>
-        <article class="card">
-          <h3>Cypress: The Practical Playbook</h3>
-          <p class="muted">Intercepts, retries, data seeding, and keeping tests fast.</p>
-          <a class="btn" href="https://medium.com/" target="_blank" rel="noopener">Read on Medium →</a>
-        </article>
-      </div>
-    </section>
+🔭 **Currently working with:** Python, JavaScript  
 
-    <!-- About -->
-    <section id="about" class="grid-2">
-      <div>
-        <div class="kicker">About</div>
-        <h2>Who I am</h2>
-        <p>I’m a hands-on builder focused on ML, data engineering, and automation. I love turning messy data into usable products and shipping small iterations quickly. When I’m not staring at a terminal, I’m likely reading, tweaking solar dashboards, or writing tutorials.</p>
-      </div>
-      <div class="panel">
-        <h3 style="margin-top:0">Quick facts</h3>
-        <ul>
-          <li>📍 Based in Pakistan</li>
-          <li>🎓 Master’s degree; self-trained in ML/AI</li>
-          <li>🧰 Enjoy: Python, notebooks, visual dashboards</li>
-        </ul>
-      </div>
-    </section>
+🌱 **Learning & implementing now-a-days:** Statistics, Machine Learning, Artificial Intelligence, Deep Learning, SQL Mastery, which will make me "Data Scientist" in the end. 
 
-    <!-- Contact -->
-    <section id="contact" class="grid-2">
-      <div>
-        <div class="kicker">Contact</div>
-        <h2>Say hello</h2>
-        <p class="muted">For collaborations, freelance, or questions, send me a note. I usually reply within a day.</p>
-        <div class="cta">
-          <a class="btn primary" href="mailto:you@example.com?subject=Hey%20skakarh">Email me</a>
-          <a class="btn" href="https://github.com/skakarh" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
-      </div>
-      <form class="panel" onsubmit="sendMail(event)">
-        <label class="muted" for="name">Your name</label>
-        <input id="name" required placeholder="Ali Khan" style="display:block;width:100%;padding:12px;border-radius:12px;border:1px solid #e2e8f0;margin:6px 0 12px;background:white" />
-        <label class="muted" for="email">Email</label>
-        <input id="email" type="email" required placeholder="you@mail.com" style="display:block;width:100%;padding:12px;border-radius:12px;border:1px solid #e2e8f0;margin:6px 0 12px;background:white" />
-        <label class="muted" for="msg">Message</label>
-        <textarea id="msg" required rows="4" placeholder="Hello!" style="display:block;width:100%;padding:12px;border-radius:12px;border:1px solid #e2e8f0;margin:6px 0 12px;background:white"></textarea>
-        <button class="btn primary" type="submit">Send</button>
-        <p id="sent" class="muted" style="display:none;margin-top:8px">Opening your email app…</p>
-      </form>
-    </section>
-  </main>
+🧑‍💻 **Passionate about:** Designing and implementing robust Test Automation Frameworks  
 
-  <footer>
-    <div class="wrap row">
-      <small>© <span id="year"></span> skakarh. Built with vanilla HTML/CSS. Hosted on GitHub Pages.</small>
-      <div>
-        <a class="muted" href="#top">Back to top ↑</a>
-      </div>
-    </div>
-  </footer>
+🎯 Dedicated to **software quality assurance, test automation, and backend scripting**, with hands-on experience in **Cypress, Selenium, Playwright, Python, Java, TypeScript, JavaScript, and API testing**. Currently expanding expertise in **Python development, automation, and cloud-based testing solutions**.  
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const tgl = document.getElementById('modeToggle');
-    tgl.addEventListener('click', () => {
-      const c = document.documentElement.classList;
-      const dark = c.toggle('dark');
-      localStorage.setItem('color-scheme', dark ? 'dark' : 'light');
-      tgl.textContent = dark ? '☀️' : '🌙';
-    });
-    function sendMail(e){
-      e.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const msg = document.getElementById('msg').value.trim();
-      const link = `mailto:you@example.com?subject=Website%20message%20from%20${encodeURIComponent(name)}&body=${encodeURIComponent(msg + "\n\nFrom: " + name + " <" + email + ">")}`;
-      document.getElementById('sent').style.display='block';
-      window.location.href = link;
-    }
-  </script>
-</body>
-</html>
+📫 **Reach me at:** [about.me/shahnawazkhankakar](https://about.me/shahnawazkhankakar)  
+ 
+
+
+<hr>
+
+## 🛠 Skills
+
+## 💻 Programming Languages
+<p>
+  <img alt="Python" src="https://img.shields.io/badge/Python-%2314354C.svg?logo=python&logoColor=white" /> &emsp;
+  <img alt="Java" src="https://img.shields.io/badge/Java-%23007396.svg?logo=openjdk&logoColor=white" /> &emsp;
+  <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?logo=javascript&logoColor=black" /> &emsp;
+  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-%23007ACC.svg?logo=typescript&logoColor=white" /> &emsp;
+</p>
+
+<hr>
+
+## 🧪 Automation & Testing
+<p>
+  <img alt="Cypress" src="https://img.shields.io/badge/Cypress-%2317202C.svg?logo=cypress&logoColor=white" /> &emsp;
+  <img alt="Selenium" src="https://img.shields.io/badge/Selenium-%2343B02A.svg?logo=selenium&logoColor=white" /> &emsp;
+  <img alt="Playwright" src="https://img.shields.io/badge/Playwright-%2345ba4b.svg?logo=playwright&logoColor=white" /> &emsp;
+  <img alt="PyTest" src="https://img.shields.io/badge/PyTest-%230A9EDC.svg?logo=python&logoColor=white" />
+</p>
+
+<hr>
+
+## 🌐 Web & UI Development
+<p>
+  <img alt="HTML5" src="https://img.shields.io/badge/HTML5-%23E34F26.svg?logo=html5&logoColor=white" /> &emsp;
+  <img alt="CSS3" src="https://img.shields.io/badge/CSS3-%231572B6.svg?logo=css3&logoColor=white" /> &emsp;
+  <img alt="React" src="https://img.shields.io/badge/React-%2361DAFB.svg?logo=react&logoColor=black" />
+</p>
+
+<hr>
+
+## ☁ Tools & Cloud
+<p>
+  <img alt="AWS" src="https://img.shields.io/badge/AWS-%23FF9900.svg?logo=amazonaws&logoColor=white" /> &emsp;
+  <img alt="Git" src="https://img.shields.io/badge/Git-%23F05032.svg?logo=git&logoColor=white" /> &emsp;
+  <img alt="GitHub" src="https://img.shields.io/badge/GitHub-%23181717.svg?logo=github&logoColor=white" /> &emsp;
+  <img alt="Docker" src="https://img.shields.io/badge/Docker-%232496ED.svg?logo=docker&logoColor=white" /> &emsp;
+  <img alt="Jenkins" src="https://img.shields.io/badge/Jenkins-%23D24939.svg?logo=jenkins&logoColor=white" />
+</p>
+
+<hr>
+
+## 📫 Connect with me
+<p align="left">
+  <a href="https://www.linkedin.com/in/skakarh/" target="blank">
+    <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="LinkedIn" height="30" width="40" />
+  </a>
+  <a href="https://medium.com/@skakarh" target="blank">
+    <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/medium.svg" alt="Medium" height="30" width="40" />
+  </a>
+  <a href="https://twitter.com/meskakarh" target="blank">
+    <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="Twitter" height="30" width="40" />
+  </a>
+  <a href="mailto:shahnawaz.jrw@gmail.com" target="blank">
+    <img align="center" src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Email" height="30" width="40" />
+  </a>
+</p>
+
+<hr>
+
+### ⚡ Fun Fact
+
+> “Code is like humor. When you have to explain it, it’s bad.” — Cory House
+
+<hr>
+
+
+## 🌱 Card Projects
+<h2 style="margin-bottom:8px">Featured projects</h2>
+<div class="meta" style="margin-bottom:10px">A few demos and repos I maintain</div>
+<ul>
+  <li>
+    <strong><a href="https://github.com/ShahnawazKakarh/sql-joins-visual-understanding" target="_blank" style="color:#fff">SQL Joins Visual Understanding</a></strong>
+    <div class="meta">Interactive demo showing INNER / LEFT / RIGHT / FULL joins</div>
+  </li>
+
+</ul>
+
+
+<hr>
+
+## ✍ Recent Blog Posts
+
+Here are some of my recent blogs where I share my experiences, tutorials, and learnings in software testing, automation, and development:
+<!-- BLOG-POST-LIST:START -->
+- [JMeter Architecture Explained: How JMeter Really Works Under the Hood](https://skakarh.medium.com/jmeter-architecture-explained-how-jmeter-really-works-under-the-hood-834eb59d412b?source=rss-13a2ac43dc86------2)
+- [Day 11 — Reading and Writing Files in Python &lpar;The Right Way&rpar;](https://skakarh.medium.com/day-11-reading-and-writing-files-in-python-the-right-way-c649e83f0c60?source=rss-13a2ac43dc86------2)
+- [Day  — ⚠️ Error Handling in Python: Try, Except, Finally — Explained with Real Bugs](https://skakarh.medium.com/day-%EF%B8%8F-error-handling-in-python-try-except-finally-explained-with-real-bugs-5a549bc61131?source=rss-13a2ac43dc86------2)
+- [Why JMeter Is Still the King of Performance Testing in 2026](https://skakarh.medium.com/why-jmeter-is-still-the-king-of-performance-testing-in-2026-2af7f68a3cce?source=rss-13a2ac43dc86------2)
+- [Day 9️⃣ —  Understanding Scope in Python](https://skakarh.medium.com/day-9%EF%B8%8F%E2%83%A3-understanding-scope-in-python-65ef7d23d417?source=rss-13a2ac43dc86------2)
+<!-- BLOG-POST-LIST:END -->
+- *(More articles coming soon... Stay tuned!)*
