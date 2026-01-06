@@ -1,78 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shahnawaz Kakarh Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body { margin: 0; font-family: 'Roboto', sans-serif; background: #121212; color: #ffffff; }
-        a { color: #6FDA44; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        header { text-align: center; padding: 2rem 1rem; background: linear-gradient(135deg,#1f1f1f,#222); }
-        header img { border-radius: 50%; width: 150px; }
-        header h1 { margin: 1rem 0 0.5rem 0; font-size: 2rem; }
-        header p { margin: 0.2rem 0; font-size: 1rem; color: #aaa; }
-        section { padding: 2rem 1rem; max-width: 900px; margin: auto; }
-        h2 { color: #6FDA44; border-bottom: 2px solid #6FDA44; display: inline-block; padding-bottom: 0.3rem; }
-        .skills, .projects, .contact { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
-        .skill, .project, .contact-item { background: #1f1f1f; padding: 1rem; border-radius: 10px; flex: 1 1 150px; min-width: 150px; text-align: center; }
-        .skill img, .contact-item img { max-width: 50px; margin-bottom: 0.5rem; }
-        .project a { font-weight: bold; display: block; margin-bottom: 0.3rem; }
-        footer { text-align: center; padding: 2rem; color: #888; font-size: 0.9rem; }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Shahnawaz Khan — Developer</title>
+  <meta name="description" content="Shahnawaz Khan — projects, blog and contact.">
+  <meta property="og:title" content="Shahnawaz Khan — Developer">
+  <meta property="og:description" content="Projects and demos by Shahnawaz Khan">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0a0a0a">
+  <style>
+    :root { --bg:#0a0a0a; --card:#111; --muted:#cdd6f4; --accent:#9A76F4; --glass:rgba(255,255,255,0.03); }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; background:linear-gradient(180deg,#050505,var(--bg)); color:#fff; min-height:100vh; -webkit-font-smoothing:antialiased;}
+    .wrap{max-width:980px;margin:48px auto;padding:24px}
+    header{display:flex;gap:18px;align-items:center;margin-bottom:18px}
+    .avatar{width:96px;height:96px;border-radius:14px;overflow:hidden;border:2px solid rgba(255,255,255,0.06)}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    h1{font-size:1.5rem;margin-bottom:6px}
+    p.lead{color:var(--muted);margin-bottom:12px}
+    .buttons a{display:inline-block;margin-right:8px;padding:8px 12px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600}
+    main{display:grid;grid-template-columns:1fr 320px;gap:18px}
+    .card{background:var(--card);border-radius:12px;padding:14px;border:1px solid rgba(255,255,255,0.03)}
+    .projects ul{list-style:none}
+    .projects li{padding:10px 0;border-bottom:1px dashed rgba(255,255,255,0.02)}
+    .meta{color:var(--muted);font-size:0.9rem}
+    aside .social a{display:block;color:var(--muted);text-decoration:none;margin-bottom:8px}
+    footer{text-align:center;color:var(--muted);margin-top:18px;font-size:0.9rem}
+    @media (max-width:900px){ main{grid-template-columns:1fr} .avatar{width:72px;height:72px} }
+  </style>
 </head>
 <body>
-
-<header>
-    <img src="https://github.com/ShahnawazKakarh/ShahnawazKakarh/blob/main/programming.gif" alt="Shahnawaz Khan">
-    <h1>Hi there! I'm Shahnawaz Khan 👋</h1>
-    <p>QA Automation Engineer | SDET | Python Developer | Back-End Engineer</p>
-    <p>📍 Lahore, Pakistan</p>
-</header>
-
-<section>
-    <h2>About Me</h2>
-    <p>Passionate about designing and implementing robust test automation frameworks, software quality assurance, and backend scripting. Experienced with Cypress, Selenium, Playwright, Python, Java, TypeScript, JavaScript, and API testing. Expanding expertise in Python development, automation, and cloud-based solutions.</p>
-</section>
-
-<section>
-    <h2>Skills</h2>
-    <div class="skills">
-        <div class="skill"><img src="https://img.shields.io/badge/Python-%2314354C.svg?logo=python&logoColor=white" alt="Python"><br>Python</div>
-        <div class="skill"><img src="https://img.shields.io/badge/Java-%23007396.svg?logo=openjdk&logoColor=white" alt="Java"><br>Java</div>
-        <div class="skill"><img src="https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?logo=javascript&logoColor=black" alt="JavaScript"><br>JavaScript</div>
-        <div class="skill"><img src="https://img.shields.io/badge/TypeScript-%23007ACC.svg?logo=typescript&logoColor=white" alt="TypeScript"><br>TypeScript</div>
-        <div class="skill"><img src="https://img.shields.io/badge/Cypress-%2317202C.svg?logo=cypress&logoColor=white" alt="Cypress"><br>Cypress</div>
-        <div class="skill"><img src="https://img.shields.io/badge/Selenium-%2343B02A.svg?logo=selenium&logoColor=white" alt="Selenium"><br>Selenium</div>
-        <div class="skill"><img src="https://img.shields.io/badge/Playwright-%2345ba4b.svg?logo=playwright&logoColor=white" alt="Playwright"><br>Playwright</div>
-        <div class="skill"><img src="https://img.shields.io/badge/PyTest-%230A9EDC.svg?logo=python&logoColor=white" alt="PyTest"><br>PyTest</div>
-    </div>
-</section>
-
-<section>
-    <h2>Featured Projects</h2>
-    <div class="projects">
-        <div class="project">
-            <a href="https://ShahnawazKakarh.github.io/sql-joins-visual-understanding/index.html" target="_blank">SQL Joins Visual Understanding</a>
-            Interactive demo showing INNER / LEFT / RIGHT / FULL joins
+  <div class="wrap">
+    <header>
+      <div class="avatar" aria-hidden="true">
+        <!-- Replace the src with your avatar or leave blank -->
+        <img src="https://avatars.githubusercontent.com/u/0?v=4" alt="Shahnawaz Khan">
+      </div>
+      <div>
+        <h1>Shahnawaz Khan</h1>
+        <p class="lead">I build developer tools, visual demos and teach database concepts — exploring data & web tech.</p>
+        <div class="buttons">
+          <a href="https://github.com/ShahnawazKakarh" target="_blank">GitHub</a>
+          <a href="mailto:you@example.com">Email</a>
         </div>
-    </div>
-</section>
+      </div>
+    </header>
 
-<section>
-    <h2>Connect With Me</h2>
-    <div class="contact">
-        <div class="contact-item"><a href="https://www.linkedin.com/in/skakarh/" target="_blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="LinkedIn"><br>LinkedIn</a></div>
-        <div class="contact-item"><a href="https://medium.com/@skakarh" target="_blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/medium.svg" alt="Medium"><br>Medium</a></div>
-        <div class="contact-item"><a href="https://twitter.com/meskakarh" target="_blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="Twitter"><br>Twitter</a></div>
-        <div class="contact-item"><a href="mailto:shahnawaz.jrw@gmail.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Email"><br>Email</a></div>
-    </div>
-</section>
+    <main>
+      <section class="card projects">
+        <h2 style="margin-bottom:8px">Featured projects</h2>
+        <div class="meta" style="margin-bottom:10px">A few demos and repos I maintain</div>
+        <ul>
+          <li>
+            <strong><a href="https://github.com/ShahnawazKakarh/sql-joins-visual-understanding" target="_blank" style="color:#fff">SQL Joins Visual Understanding</a></strong>
+            <div class="meta">Interactive demo showing INNER / LEFT / RIGHT / FULL joins</div>
+          </li>
+          <li>
+            <strong><a href="#" style="color:#fff">Project A</a></strong>
+            <div class="meta">Short description of Project A</div>
+          </li>
+          <li>
+            <strong><a href="#" style="color:#fff">Project B</a></strong>
+            <div class="meta">Short description of Project B</div>
+          </li>
+        </ul>
+      </section>
 
-<footer>
-    ⚡ Fun Fact: “Code is like humor. When you have to explain it, it’s bad.” — Cory House
-</footer>
+      <aside>
+        <div class="card" style="margin-bottom:12px">
+          <h3 style="margin-bottom:8px">About</h3>
+          <div class="meta">Developer • educator • builder. Interests: databases, web UIs, data viz.</div>
+        </div>
 
+        <div class="card social">
+          <h3 style="margin-bottom:8px">Connect</h3>
+          <a href="https://github.com/ShahnawazKakarh" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a>
+          <a href="mailto:you@example.com">Email</a>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      Built with ❤️ • <a href="https://github.com/ShahnawazKakarh" target="_blank" style="color:inherit">GitHub</a>
+    </footer>
+  </div>
 </body>
 </html>
