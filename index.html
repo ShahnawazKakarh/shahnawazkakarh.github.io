@@ -1,92 +1,100 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Shahnawaz Khan — Profile</title>
-  <meta name="description" content="Shahnawaz Khan — developer, test automation, data enthusiast.">
-  <meta property="og:title" content="Shahnawaz Khan — Developer">
-  <meta property="og:description" content="Projects and demos by Shahnawaz Khan">
+  <meta name="description" content="Shahnawaz Khan — developer, test automation, data enthusiast." />
+  <meta property="og:title" content="Shahnawaz Khan — Developer" />
+  <meta property="og:description" content="Projects and demos by Shahnawaz Khan" />
   <meta name="theme-color" content="#0a0a0a" />
-
   <style>
-    :root{
-      --bg:#0a0a0a;
-      --panel:#0f0f14;
-      --accent:#9A76F4;
-      --accent-2:#6b46c1;
-      --muted:#cdd6f4;
-      --success:#22c55e;
-      --glass: rgba(255,255,255,0.03);
-    }
-    *{box-sizing:border-box;margin:0;padding:0}
-    html,body{height:100%}
-    body{
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background: linear-gradient(180deg,#050505,var(--bg));
-      color:#fff;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.4;
-      padding:24px;
+    /* Base reset & fonts */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      background: #0a0a0a;
+      color: #ffffff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 1.45;
+      padding: 20px;
     }
 
-    .container{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+    /* Container */
+    .container { max-width: 1100px; margin: 0 auto; display:flex; flex-direction:column; gap:16px; }
 
     /* Header */
     .header {
-      background: linear-gradient(135deg,var(--accent) 0%, var(--accent-2) 100%);
-      padding:16px;
-      border-radius:12px;
+      background: linear-gradient(135deg, #9A76F4 0%, #6b46c1 100%);
+      padding: 16px;
+      border-radius: 12px;
       display:flex;
       align-items:center;
       justify-content:space-between;
       gap:12px;
     }
-    .brand {display:flex;align-items:center;gap:12px}
+    .brand { display:flex; align-items:center; gap:12px; }
     .logo {
-      width:56px;height:56px;border-radius:12px;display:flex;align-items:center;justify-content:center;
-      font-weight:700;color:#fff;background:rgba(255,255,255,0.08);
+      width:56px; height:56px; border-radius:10px; display:flex; align-items:center; justify-content:center;
+      font-weight:700; color:#fff; background:rgba(255,255,255,0.06);
     }
-    .brand h1{font-size:1.05rem}
-    .brand p{color:rgba(255,255,255,0.92);opacity:0.95;font-size:0.9rem;margin-top:4px}
+    .brand h1 { font-size:1.05rem; }
+    .brand p  { font-size:0.9rem; opacity:0.95; margin-top:4px; }
 
-    .header .links a{color:#fff;text-decoration:none;font-weight:600;margin-left:10px}
+    .header .links a { color:#fff; text-decoration:none; font-weight:600; margin-left:12px; }
 
-    /* Layout */
-    .main {display:grid;grid-template-columns:1fr 340px;gap:16px}
-    .panel{background:var(--panel);border:1px solid rgba(255,255,255,0.03);padding:16px;border-radius:12px}
-    .about .profile-gif{float:right;margin-left:12px;border-radius:8px;max-width:220px}
-    .meta{color:var(--muted);font-size:0.95rem}
-    h2.section-title{color:var(--accent);margin-bottom:8px;font-size:1rem}
-    hr.sep{border:none;border-top:1px solid rgba(255,255,255,0.04);margin:12px 0}
+    /* Main grid */
+    .main { display:grid; grid-template-columns: 1fr 340px; gap:16px; margin-top:6px; }
 
-    /* Projects list (keeps your snippet style) */
-    .projects ul{list-style:none;padding-left:0}
-    .projects li{padding:10px 0;border-bottom:1px dashed rgba(255,255,255,0.02)}
-    .projects a{color:#fff;text-decoration:none;font-weight:700}
-    .projects .meta{color:var(--muted);font-weight:500;font-size:0.9rem;margin-top:4px}
+    /* Panels */
+    .panel {
+      background: #0a0a0a;
+      border: 1px solid #313244;
+      border-radius: 12px;
+      padding: 16px;
+      overflow: hidden;
+    }
+
+    .section-title {
+      color: #9A76F4;
+      font-size: 1rem;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    /* About area */
+    .about .profile-gif { float:right; margin-left:12px; border-radius:8px; max-width:220px; display:block; }
+    .meta { color:#cdd6f4; font-size:0.95rem; }
+    .sep { border:none; border-top:1px solid rgba(49,50,68,0.6); margin:12px 0; }
+
+    /* Projects (keeps your snippet look) */
+    .projects ul { list-style:none; padding-left:0; }
+    .projects li { padding:10px 0; border-bottom:1px dashed rgba(255,255,255,0.03); }
+    .projects a { color:#fff; font-weight:700; text-decoration:none; }
+    .projects .meta { color:#cdd6f4; font-weight:500; margin-top:4px; font-size:0.9rem; }
 
     /* Skills badges */
-    .skills img{vertical-align:middle;margin-right:10px;margin-bottom:8px}
+    .skills img { vertical-align:middle; margin-right:10px; margin-bottom:8px; }
 
     /* Right column */
-    aside .card-title{font-weight:700;color:var(--accent);margin-bottom:8px}
-    aside .connect a{display:block;color:var(--muted);text-decoration:none;margin-bottom:8px}
+    aside .card-title { color:#9A76F4; font-weight:700; margin-bottom:8px; }
+    aside .connect a { display:block; color:#cdd6f4; text-decoration:none; margin-bottom:8px; }
 
-    footer{margin-top:8px;text-align:center;color:var(--muted);font-size:0.9rem}
+    footer { margin-top:10px; text-align:center; color:#cdd6f4; font-size:0.9rem; }
 
     /* Responsive */
-    @media (max-width:980px){
-      .main{grid-template-columns:1fr}
-      .about .profile-gif{float:none;display:block;margin:12px auto 8px}
-      .logo{width:48px;height:48px}
+    @media (max-width:980px) {
+      .main { grid-template-columns: 1fr; }
+      .about .profile-gif { float:none; margin:12px auto 8px; display:block; }
+      .logo { width:48px; height:48px; }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <header class="header">
+    <header class="header" role="banner">
       <div class="brand">
         <div class="logo">SK</div>
         <div>
@@ -94,33 +102,36 @@
           <p>Developer • Test automation • Data enthusiast</p>
         </div>
       </div>
-      <div class="links">
+      <nav class="links" aria-label="header links">
         <a href="https://github.com/ShahnawazKakarh" target="_blank">GitHub</a>
         <a href="https://about.me/shahnawazkhankakar" target="_blank">About.me</a>
-      </div>
+        <!-- Replace placeholders below with your real links -->
+        <a href="mailto:you@example.com">Email</a>
+        <a href="https://www.linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a>
+      </nav>
     </header>
 
-    <main class="main" aria-label="Main content">
-      <!-- Left: About, Skills, Projects -->
+    <main class="main" role="main">
+      <!-- Left column: About + Skills + Projects -->
       <section class="panel about" aria-labelledby="about-heading">
         <h2 id="about-heading" class="section-title">👨‍💻 About Me</h2>
 
-        <!-- Use raw.githubusercontent.com so image loads on pages -->
+        <!-- GIF (use raw.githubusercontent so it loads on GitHub Pages) -->
         <picture>
           <img class="profile-gif" src="https://raw.githubusercontent.com/ShahnawazKakarh/ShahnawazKakarh/main/programming.gif" alt="programming gif" width="220">
         </picture>
 
-        <p class="meta" style="margin-bottom:10px">
+        <p class="meta" style="margin-bottom:10px;">
           🔭 <strong>Currently working with:</strong> Python, JavaScript<br>
-          🌱 <strong>Learning & implementing now-a-days:</strong> Statistics, Machine Learning, Artificial Intelligence, Deep Learning, SQL Mastery — working toward Data Science.<br>
-          🧑‍💻 <strong>Passionate about:</strong> Designing and implementing robust Test Automation Frameworks.<br>
-          🎯 Dedicated to <strong>software quality assurance, test automation, and backend scripting</strong>, with hands-on experience in <strong>Cypress, Selenium, Playwright, Python, Java, TypeScript, JavaScript, and API testing</strong>.<br>
-          📫 <strong>Reach me at:</strong> <a href="https://about.me/shahnawazkhankakar" target="_blank" style="color:var(--muted)">about.me/shahnawazkhankakar</a>
+          🌱 <strong>Learning & implementing now-a-days:</strong> Statistics, Machine Learning, Artificial Intelligence, Deep Learning, SQL Mastery, which will make me "Data Scientist" in the end.<br>
+          🧑‍💻 <strong>Passionate about:</strong> Designing and implementing robust Test Automation Frameworks<br>
+          🎯 Dedicated to <strong>software quality assurance, test automation, and backend scripting</strong>, with hands-on experience in <strong>Cypress, Selenium, Playwright, Python, Java, TypeScript, JavaScript, and API testing</strong>. Currently expanding expertise in <strong>Python development, automation, and cloud-based testing solutions</strong>.<br>
+          📫 <strong>Reach me at:</strong> <a href="https://about.me/shahnawazkhankakar" target="_blank" style="color:#cdd6f4">about.me/shahnawazkhankakar</a>
         </p>
 
         <hr class="sep">
 
-        <h3 style="margin-bottom:8px">## 🛠 Skills</h3>
+        <h3 style="margin-bottom:8px; color:#9A76F4">## 🛠 Skills</h3>
 
         <h4 style="margin:8px 0 6px">💻 Programming Languages</h4>
         <p class="skills">
@@ -168,22 +179,22 @@
           <div class="meta" style="margin-bottom:10px">A few demos and repos I maintain</div>
           <ul>
             <li>
-              <strong><a href="https://github.com/ShahnawazKakarh/sql-joins-visual-understanding" target="_blank">SQL Joins Visual Understanding</a></strong>
+              <strong><a href="https://github.com/ShahnawazKakarh/sql-joins-visual-understanding" target="_blank" style="color:#fff">SQL Joins Visual Understanding</a></strong>
               <div class="meta">Interactive demo showing INNER / LEFT / RIGHT / FULL joins</div>
             </li>
             <li>
-              <strong><a href="#" target="_blank">Project A</a></strong>
+              <strong><a href="#" target="_blank" style="color:#fff">Project A</a></strong>
               <div class="meta">Short description of Project A</div>
             </li>
             <li>
-              <strong><a href="#" target="_blank">Project B</a></strong>
+              <strong><a href="#" target="_blank" style="color:#fff">Project B</a></strong>
               <div class="meta">Short description of Project B</div>
             </li>
           </ul>
         </section>
       </section>
 
-      <!-- Right column: Quick info & Connect -->
+      <!-- Right column: quick info & connect -->
       <aside>
         <div class="panel" style="margin-bottom:12px">
           <div class="card-title">Quick Info</div>
@@ -196,13 +207,14 @@
             <a href="https://github.com/ShahnawazKakarh" target="_blank">GitHub</a>
             <a href="https://www.linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a>
             <a href="mailto:you@example.com">Email</a>
+            <a href="https://about.me/shahnawazkhankakar" target="_blank">About.me</a>
           </div>
         </div>
       </aside>
     </main>
 
     <footer>
-      Hosted on GitHub • <a href="https://github.com/ShahnawazKakarh" target="_blank" style="color:var(--muted)">View source</a>
+      Hosted on GitHub • <a href="https://github.com/ShahnawazKakarh" target="_blank" style="color:#cdd6f4">View source</a>
     </footer>
   </div>
 </body>
