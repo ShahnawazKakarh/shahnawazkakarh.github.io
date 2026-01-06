@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Shahnawaz Khan — Developer</title>
   <meta name="description" content="Shahnawaz Khan — projects, blog and contact.">
-  <meta property="og:title" content="Shahnawaz Khan — Developer">
-  <meta property="og:description" content="Projects and demos by Shahnawaz Khan">
+  <meta property="og:title" content="Shahnawaz Khan — Software Engineer ">
+  <meta property="og:description" content="Projects and Demos by Shahnawaz Khan">
   <meta property="og:type" content="website">
   <meta name="theme-color" content="#0a0a0a">
   <style>
@@ -27,15 +27,18 @@
     .meta{color:var(--muted);font-size:0.9rem}
     aside .social a{display:block;color:var(--muted);text-decoration:none;margin-bottom:8px}
     footer{text-align:center;color:var(--muted);margin-top:18px;font-size:0.9rem}
-    @media (max-width:900px){ main{grid-template-columns:1fr} .avatar{width:72px;height:72px} }
+    /* About & badges */
+    .about .profile-gif { float:right; margin-left:12px; border-radius:8px; max-width:250px; }
+    .skills-section img { vertical-align:middle; margin-right:12px; margin-bottom:8px; }
+    .clearfix::after { content: ""; display: table; clear: both; }
+    @media (max-width:900px){ main{grid-template-columns:1fr} .avatar{width:72px;height:72px} .about .profile-gif{float:none;display:block;margin:12px auto 0} }
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
       <div class="avatar" aria-hidden="true">
-        <!-- Replace the src with your avatar or leave blank -->
-        <img src="https://avatars.githubusercontent.com/u/0?v=4" alt="Shahnawaz Khan">
+        <img src="https://avatars.githubusercontent.com/u/1128882911?v=4" alt="Shahnawaz Khan">
       </div>
       <div>
         <h1>Shahnawaz Khan</h1>
@@ -48,6 +51,69 @@
     </header>
 
     <main>
+      <!-- Left column: About, Projects, Skills -->
+      <section class="card about">
+        <h2 style="margin-bottom:8px">👨‍💻 About Me</h2>
+
+        <!-- Use raw.githubusercontent URL for images hosted in your GitHub profile repo -->
+        <picture>
+          <img class="profile-gif" src="https://raw.githubusercontent.com/ShahnawazKakarh/ShahnawazKakarh/main/programming.gif" alt="programming gif" width="250">
+        </picture>
+
+        <div class="clearfix">
+          <p style="color:var(--muted);margin-bottom:10px;">
+            🔭 <strong>Currently working with:</strong> Python, JavaScript<br>
+            🌱 <strong>Learning & implementing now-a-days:</strong> Statistics, Machine Learning, Artificial Intelligence, Deep Learning, SQL Mastery — on the path to Data Science.<br>
+            🧑‍💻 <strong>Passionate about:</strong> Designing and implementing robust Test Automation Frameworks.<br>
+            🎯 Dedicated to <strong>software quality assurance, test automation, and backend scripting</strong>, with hands-on experience in <strong>Cypress, Selenium, Playwright, Python, Java, TypeScript, JavaScript, and API testing</strong>. Currently expanding expertise in <strong>Python development, automation, and cloud-based testing solutions</strong>.<br>
+            📫 <strong>Reach me at:</strong> <a href="https://about.me/shahnawazkhankakar" target="_blank" style="color:var(--muted)">about.me/shahnawazkhankakar</a>
+          </p>
+        </div>
+
+        <hr style="border:none;border-top:1px solid rgba(255,255,255,0.04);margin:12px 0">
+
+        <h3 style="margin-bottom:8px">## 🛠 Skills</h3>
+
+        <h4 style="margin:8px 0 6px">💻 Programming Languages</h4>
+        <p class="skills-section">
+          <img alt="Python" src="https://img.shields.io/badge/Python-%2314354C.svg?logo=python&logoColor=white" />
+          <img alt="Java" src="https://img.shields.io/badge/Java-%23007396.svg?logo=openjdk&logoColor=white" />
+          <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?logo=javascript&logoColor=black" />
+          <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-%23007ACC.svg?logo=typescript&logoColor=white" />
+        </p>
+
+        <hr style="border:none;border-top:1px solid rgba(255,255,255,0.04);margin:12px 0">
+
+        <h4 style="margin:8px 0 6px">🧪 Automation & Testing</h4>
+        <p class="skills-section">
+          <img alt="Cypress" src="https://img.shields.io/badge/Cypress-%2317202C.svg?logo=cypress&logoColor=white" />
+          <img alt="Selenium" src="https://img.shields.io/badge/Selenium-%2343B02A.svg?logo=selenium&logoColor=white" />
+          <img alt="Playwright" src="https://img.shields.io/badge/Playwright-%2345ba4b.svg?logo=playwright&logoColor=white" />
+          <img alt="PyTest" src="https://img.shields.io/badge/PyTest-%230A9EDC.svg?logo=python&logoColor=white" />
+        </p>
+
+        <hr style="border:none;border-top:1px solid rgba(255,255,255,0.04);margin:12px 0">
+
+        <h4 style="margin:8px 0 6px">🌐 Web & UI Development</h4>
+        <p class="skills-section">
+          <img alt="HTML5" src="https://img.shields.io/badge/HTML5-%23E34F26.svg?logo=html5&logoColor=white" />
+          <img alt="CSS3" src="https://img.shields.io/badge/CSS3-%231572B6.svg?logo=css3&logoColor=white" />
+          <img alt="React" src="https://img.shields.io/badge/React-%2361DAFB.svg?logo=react&logoColor=black" />
+        </p>
+
+        <hr style="border:none;border-top:1px solid rgba(255,255,255,0.04);margin:12px 0">
+
+        <h4 style="margin:8px 0 6px">☁ Tools & Cloud</h4>
+        <p class="skills-section">
+          <img alt="AWS" src="https://img.shields.io/badge/AWS-%23FF9900.svg?logo=amazonaws&logoColor=white" />
+          <img alt="Git" src="https://img.shields.io/badge/Git-%23F05032.svg?logo=git&logoColor=white" />
+          <img alt="GitHub" src="https://img.shields.io/badge/GitHub-%23181717.svg?logo=github&logoColor=white" />
+          <img alt="Docker" src="https://img.shields.io/badge/Docker-%232496ED.svg?logo=docker&logoColor=white" />
+          <img alt="Jenkins" src="https://img.shields.io/badge/Jenkins-%23D24939.svg?logo=jenkins&logoColor=white" />
+        </p>
+      </section>
+
+      <!-- Featured projects (keeps your earlier snippet content) -->
       <section class="card projects">
         <h2 style="margin-bottom:8px">Featured projects</h2>
         <div class="meta" style="margin-bottom:10px">A few demos and repos I maintain</div>
@@ -67,10 +133,14 @@
         </ul>
       </section>
 
+      <!-- Right column: About & Social / Quick links -->
       <aside>
         <div class="card" style="margin-bottom:12px">
-          <h3 style="margin-bottom:8px">About</h3>
-          <div class="meta">Developer • educator • builder. Interests: databases, web UIs, data viz.</div>
+          <h3 style="margin-bottom:8px">Quick Info</h3>
+          <div class="meta">
+            Developer • educator • builder.<br>
+            Interests: databases, web UIs, data viz, test automation.
+          </div>
         </div>
 
         <div class="card social">
