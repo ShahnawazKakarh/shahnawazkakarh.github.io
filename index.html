@@ -1,221 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Shahnawaz Khan — Profile</title>
-  <meta name="description" content="Shahnawaz Khan — developer, test automation, data enthusiast." />
-  <meta property="og:title" content="Shahnawaz Khan — Developer" />
-  <meta property="og:description" content="Projects and demos by Shahnawaz Khan" />
-  <meta name="theme-color" content="#0a0a0a" />
-  <style>
-    /* Base reset & fonts */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { height: 100%; }
-    body {
-      background: #0a0a0a;
-      color: #ffffff;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Arial, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      line-height: 1.45;
-      padding: 20px;
-    }
-
-    /* Container */
-    .container { max-width: 1100px; margin: 0 auto; display:flex; flex-direction:column; gap:16px; }
-
-    /* Header */
-    .header {
-      background: linear-gradient(135deg, #9A76F4 0%, #6b46c1 100%);
-      padding: 16px;
-      border-radius: 12px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
-    }
-    .brand { display:flex; align-items:center; gap:12px; }
-    .logo {
-      width:56px; height:56px; border-radius:10px; display:flex; align-items:center; justify-content:center;
-      font-weight:700; color:#fff; background:rgba(255,255,255,0.06);
-    }
-    .brand h1 { font-size:1.05rem; }
-    .brand p  { font-size:0.9rem; opacity:0.95; margin-top:4px; }
-
-    .header .links a { color:#fff; text-decoration:none; font-weight:600; margin-left:12px; }
-
-    /* Main grid */
-    .main { display:grid; grid-template-columns: 1fr 340px; gap:16px; margin-top:6px; }
-
-    /* Panels */
-    .panel {
-      background: #0a0a0a;
-      border: 1px solid #313244;
-      border-radius: 12px;
-      padding: 16px;
-      overflow: hidden;
-    }
-
-    .section-title {
-      color: #9A76F4;
-      font-size: 1rem;
-      margin-bottom: 8px;
-      font-weight: 700;
-    }
-
-    /* About area */
-    .about .profile-gif { float:right; margin-left:12px; border-radius:8px; max-width:220px; display:block; }
-    .meta { color:#cdd6f4; font-size:0.95rem; }
-    .sep { border:none; border-top:1px solid rgba(49,50,68,0.6); margin:12px 0; }
-
-    /* Projects (keeps your snippet look) */
-    .projects ul { list-style:none; padding-left:0; }
-    .projects li { padding:10px 0; border-bottom:1px dashed rgba(255,255,255,0.03); }
-    .projects a { color:#fff; font-weight:700; text-decoration:none; }
-    .projects .meta { color:#cdd6f4; font-weight:500; margin-top:4px; font-size:0.9rem; }
-
-    /* Skills badges */
-    .skills img { vertical-align:middle; margin-right:10px; margin-bottom:8px; }
-
-    /* Right column */
-    aside .card-title { color:#9A76F4; font-weight:700; margin-bottom:8px; }
-    aside .connect a { display:block; color:#cdd6f4; text-decoration:none; margin-bottom:8px; }
-
-    footer { margin-top:10px; text-align:center; color:#cdd6f4; font-size:0.9rem; }
-
-    /* Responsive */
-    @media (max-width:980px) {
-      .main { grid-template-columns: 1fr; }
-      .about .profile-gif { float:none; margin:12px auto 8px; display:block; }
-      .logo { width:48px; height:48px; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shahnawaz Kakarh Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; font-family: 'Roboto', sans-serif; background: #121212; color: #fff; overflow-x: hidden; }
+  a { color: #6FDA44; text-decoration: none; }
+  header { text-align: center; padding: 3rem 1rem; background: linear-gradient(135deg,#1f1f1f,#222); position: relative; }
+  header img { border-radius: 50%; width: 150px; transition: transform 0.5s; }
+  header img:hover { transform: scale(1.1) rotate(10deg); }
+  header h1 { margin: 1rem 0 0.5rem 0; font-size: 2.5rem; animation: fadeIn 1s ease-in; }
+  header p { margin: 0.3rem 0; font-size: 1rem; color: #aaa; animation: fadeIn 1.5s ease-in; }
+  @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+  section { padding: 2rem 1rem; max-width: 1000px; margin: auto; }
+  h2 { color: #6FDA44; border-bottom: 2px solid #6FDA44; display: inline-block; padding-bottom: 0.3rem; }
+  .skills, .projects, .contact { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+  .skill, .project, .contact-item { background: #1f1f1f; padding: 1.2rem; border-radius: 12px; flex: 1 1 150px; min-width: 150px; text-align: center; transition: transform 0.3s, box-shadow 0.3s; }
+  .skill:hover, .project:hover, .contact-item:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
+  .skill img, .contact-item img { max-width: 50px; margin-bottom: 0.5rem; }
+  .project a { font-weight: bold; display: block; margin-bottom: 0.3rem; }
+  footer { text-align: center; padding: 2rem; color: #888; font-size: 0.9rem; background: #1f1f1f; }
+  .typing { font-size: 1.2rem; color: #6FDA44; animation: blink 0.8s infinite; }
+  @keyframes blink { 0%,100% {opacity:1;} 50% {opacity:0;} }
+</style>
 </head>
 <body>
-  <div class="container">
-    <header class="header" role="banner">
-      <div class="brand">
-        <div class="logo">SK</div>
-        <div>
-          <h1>Shahnawaz Khan</h1>
-          <p>Developer • Test automation • Data enthusiast</p>
-        </div>
-      </div>
-      <nav class="links" aria-label="header links">
-        <a href="https://github.com/ShahnawazKakarh" target="_blank">GitHub</a>
-        <a href="https://about.me/shahnawazkhankakar" target="_blank">About.me</a>
-        <!-- Replace placeholders below with your real links -->
-        <a href="mailto:you@example.com">Email</a>
-        <a href="https://www.linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a>
-      </nav>
-    </header>
 
-    <main class="main" role="main">
-      <!-- Left column: About + Skills + Projects -->
-      <section class="panel about" aria-labelledby="about-heading">
-        <h2 id="about-heading" class="section-title">👨‍💻 About Me</h2>
+<header>
+  <img src="https://github.com/ShahnawazKakarh/ShahnawazKakarh/blob/main/programming.gif" alt="Shahnawaz Khan">
+  <h1>Hi there! I'm Shahnawaz Khan 👋</h1>
+  <p class="typing">QA Automation Engineer | SDET | Python Developer | Back-End Engineer</p>
+  <p>📍 Lahore, Pakistan</p>
+</header>
 
-        <!-- GIF (use raw.githubusercontent so it loads on GitHub Pages) -->
-        <picture>
-          <img class="profile-gif" src="https://raw.githubusercontent.com/ShahnawazKakarh/ShahnawazKakarh/main/programming.gif" alt="programming gif" width="220">
-        </picture>
+<section>
+  <h2>About Me</h2>
+  <p>Passionate about designing and implementing robust test automation frameworks, software quality assurance, and backend scripting. Experienced with Cypress, Selenium, Playwright, Python, Java, TypeScript, JavaScript, and API testing. Expanding expertise in Python development, automation, and cloud-based solutions.</p>
+</section>
 
-        <p class="meta" style="margin-bottom:10px;">
-          🔭 <strong>Currently working with:</strong> Python, JavaScript<br>
-          🌱 <strong>Learning & implementing now-a-days:</strong> Statistics, Machine Learning, Artificial Intelligence, Deep Learning, SQL Mastery, which will make me "Data Scientist" in the end.<br>
-          🧑‍💻 <strong>Passionate about:</strong> Designing and implementing robust Test Automation Frameworks<br>
-          🎯 Dedicated to <strong>software quality assurance, test automation, and backend scripting</strong>, with hands-on experience in <strong>Cypress, Selenium, Playwright, Python, Java, TypeScript, JavaScript, and API testing</strong>. Currently expanding expertise in <strong>Python development, automation, and cloud-based testing solutions</strong>.<br>
-          📫 <strong>Reach me at:</strong> <a href="https://about.me/shahnawazkhankakar" target="_blank" style="color:#cdd6f4">about.me/shahnawazkhankakar</a>
-        </p>
-
-        <hr class="sep">
-
-        <h3 style="margin-bottom:8px; color:#9A76F4">## 🛠 Skills</h3>
-
-        <h4 style="margin:8px 0 6px">💻 Programming Languages</h4>
-        <p class="skills">
-          <img alt="Python" src="https://img.shields.io/badge/Python-%2314354C.svg?logo=python&logoColor=white" />
-          <img alt="Java" src="https://img.shields.io/badge/Java-%23007396.svg?logo=openjdk&logoColor=white" />
-          <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?logo=javascript&logoColor=black" />
-          <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-%23007ACC.svg?logo=typescript&logoColor=white" />
-        </p>
-
-        <hr class="sep">
-
-        <h4 style="margin:8px 0 6px">🧪 Automation & Testing</h4>
-        <p class="skills">
-          <img alt="Cypress" src="https://img.shields.io/badge/Cypress-%2317202C.svg?logo=cypress&logoColor=white" />
-          <img alt="Selenium" src="https://img.shields.io/badge/Selenium-%2343B02A.svg?logo=selenium&logoColor=white" />
-          <img alt="Playwright" src="https://img.shields.io/badge/Playwright-%2345ba4b.svg?logo=playwright&logoColor=white" />
-          <img alt="PyTest" src="https://img.shields.io/badge/PyTest-%230A9EDC.svg?logo=python&logoColor=white" />
-        </p>
-
-        <hr class="sep">
-
-        <h4 style="margin:8px 0 6px">🌐 Web & UI Development</h4>
-        <p class="skills">
-          <img alt="HTML5" src="https://img.shields.io/badge/HTML5-%23E34F26.svg?logo=html5&logoColor=white" />
-          <img alt="CSS3" src="https://img.shields.io/badge/CSS3-%231572B6.svg?logo=css3&logoColor=white" />
-          <img alt="React" src="https://img.shields.io/badge/React-%2361DAFB.svg?logo=react&logoColor=black" />
-        </p>
-
-        <hr class="sep">
-
-        <h4 style="margin:8px 0 6px">☁ Tools & Cloud</h4>
-        <p class="skills">
-          <img alt="AWS" src="https://img.shields.io/badge/AWS-%23FF9900.svg?logo=amazonaws&logoColor=white" />
-          <img alt="Git" src="https://img.shields.io/badge/Git-%23F05032.svg?logo=git&logoColor=white" />
-          <img alt="GitHub" src="https://img.shields.io/badge/GitHub-%23181717.svg?logo=github&logoColor=white" />
-          <img alt="Docker" src="https://img.shields.io/badge/Docker-%232496ED.svg?logo=docker&logoColor=white" />
-          <img alt="Jenkins" src="https://img.shields.io/badge/Jenkins-%23D24939.svg?logo=jenkins&logoColor=white" />
-        </p>
-
-        <hr class="sep">
-
-        <!-- Featured projects (your supplied snippet) -->
-        <section class="projects" aria-labelledby="projects-heading">
-          <h2 id="projects-heading" class="section-title">Featured projects</h2>
-          <div class="meta" style="margin-bottom:10px">A few demos and repos I maintain</div>
-          <ul>
-            <li>
-              <strong><a href="https://github.com/ShahnawazKakarh/sql-joins-visual-understanding" target="_blank" style="color:#fff">SQL Joins Visual Understanding</a></strong>
-              <div class="meta">Interactive demo showing INNER / LEFT / RIGHT / FULL joins</div>
-            </li>
-            <li>
-              <strong><a href="#" target="_blank" style="color:#fff">Project A</a></strong>
-              <div class="meta">Short description of Project A</div>
-            </li>
-            <li>
-              <strong><a href="#" target="_blank" style="color:#fff">Project B</a></strong>
-              <div class="meta">Short description of Project B</div>
-            </li>
-          </ul>
-        </section>
-      </section>
-
-      <!-- Right column: quick info & connect -->
-      <aside>
-        <div class="panel" style="margin-bottom:12px">
-          <div class="card-title">Quick Info</div>
-          <div class="meta">Developer • educator • builder.<br>Interests: databases, web UIs, data viz, test automation.</div>
-        </div>
-
-        <div class="panel">
-          <div class="card-title">Connect</div>
-          <div class="connect">
-            <a href="https://github.com/ShahnawazKakarh" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a>
-            <a href="mailto:you@example.com">Email</a>
-            <a href="https://about.me/shahnawazkhankakar" target="_blank">About.me</a>
-          </div>
-        </div>
-      </aside>
-    </main>
-
-    <footer>
-      Hosted on GitHub • <a href="https://github.com/ShahnawazKakarh" target="_blank" style="color:#cdd6f4">View source</a>
-    </footer>
+<section>
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="skill"><img src="https://img.shields.io/badge/Python-%2314354C.svg?logo=python&logoColor=white"><br>Python</div>
+    <div class="skill"><img src="https://img.shields.io/badge/Java-%23007396.svg?logo=openjdk&logoColor=white"><br>Java</div>
+    <div class="skill"><img src="https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?logo=javascript&logoColor=black"><br>JavaScript</div>
+    <div class="skill"><img src="https://img.shields.io/badge/TypeScript-%23007ACC.svg?logo=typescript&logoColor=white"><br>TypeScript</div>
+    <div class="skill"><img src="https://img.shields.io/badge/Cypress-%2317202C.svg?logo=cypress&logoColor=white"><br>Cypress</div>
+    <div class="skill"><img src="https://img.shields.io/badge/Selenium-%2343B02A.svg?logo=selenium&logoColor=white"><br>Selenium</div>
+    <div class="skill"><img src="https://img.shields.io/badge/Playwright-%2345ba4b.svg?logo=playwright&logoColor=white"><br>Playwright</div>
+    <div class="skill"><img src="https://img.shields.io/badge/PyTest-%230A9EDC.svg?logo=python&logoColor=white"><br>PyTest</div>
   </div>
+</section>
+
+<section>
+  <h2>Featured Projects</h2>
+  <div class="projects">
+    <div class="project">
+      <a href="https://ShahnawazKakarh.github.io/sql-joins-visual-understanding/index.html" target="_blank">SQL Joins Visual Understanding</a>
+      Interactive demo showing INNER / LEFT / RIGHT / FULL joins
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Connect With Me</h2>
+  <div class="contact">
+    <div class="contact-item"><a href="https://www.linkedin.com/in/skakarh/" target="_blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="LinkedIn"><br>LinkedIn</a></div>
+    <div class="contact-item"><a href="https://medium.com/@skakarh" target="_blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/medium.svg" alt="Medium"><br>Medium</a></div>
+    <div class="contact-item"><a href="https://twitter.com/meskakarh" target="_blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="Twitter"><br>Twitter</a></div>
+    <div class="contact-item"><a href="mailto:shahnawaz.jrw@gmail.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Email"><br>Email</a></div>
+  </div>
+</section>
+
+<footer>
+  ⚡ Fun Fact: “Code is like humor. When you have to explain it, it’s bad.” — Cory House
+</footer>
+
+<script>
+  // Typing effect
+  const typing = document.querySelector('.typing');
+  const text = typing.textContent;
+  typing.textContent = '';
+  let i = 0;
+  function type() {
+    if(i < text.length) {
+      typing.textContent += text.charAt(i);
+      i++;
+      setTimeout(type, 50);
+    }
+  }
+  type();
+</script>
+
 </body>
 </html>
