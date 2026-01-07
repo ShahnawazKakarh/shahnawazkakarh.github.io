@@ -123,10 +123,53 @@
   </div>
 </section>
 
-<footer>
-  ⚡ Fun Fact: “Code is like humor. When you have to explain it, it’s bad.” — Cory House
+  <footer class="footer">
+  <p>
+    © <span id="year"></span> <strong>Shahnawaz Khan</strong>.  
+    All rights reserved.
+  </p>
+  <p class="footer-links">
+    <a href="https://github.com/ShahnawazKakarh" target="_blank">GitHub</a> •
+    <a href="https://www.linkedin.com/in/skakarh/" target="_blank">LinkedIn</a> •
+    <a href="https://medium.com/@skakarh" target="_blank">Medium</a>
+  </p>
+
+  <style>
+    .footer {
+  margin-top: 80px;
+  padding: 30px 20px;
+  border-top: 1px solid #222;
+  text-align: center;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.footer strong {
+  color: #7CFF6B; /* accent green */
+}
+
+.footer-links {
+  margin-top: 8px;
+}
+
+.footer-links a {
+  color: #7CFF6B;
+  text-decoration: none;
+  margin: 0 6px;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+</style>
 </footer>
 
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+  
 <script>
   // Typing effect
   const typing = document.querySelector('.typing');
